@@ -20,6 +20,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f6fcc4ba-6c13-4f50-8ace-5e26736a02e6"
+      }
+    },
+    "owner": "ammar_siddiqui"
   }
 }
