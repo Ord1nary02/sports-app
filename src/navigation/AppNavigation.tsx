@@ -1,35 +1,15 @@
-import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import { Cricket } from "../views/Cricket";
-import { Football } from "../views/Football";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { createStackNavigator } from "@react-navigation/stack";
+import { Home } from "../views/Home";
+import { Splash } from "../views/Splash";
 
-const TopTab = createMaterialTopTabNavigator();
+const Stack = createStackNavigator();
 export const AppNavigation = () => {
   return (
-    <SafeAreaView
-        style={{flex : 1 , backgroundColor : '#00000'}} 
-    >
-        <TopTab.Navigator
-        initialRouteName="Cricket"
-        screenOptions={{
-            tabBarStyle: {
-            borderRadius: 5,
-            backgroundColor: "#000000",
-            },
-            tabBarLabelStyle: {
-            textAlign: "center",
-            color : '#FFFFFF'
-            },
-            tabBarIndicatorStyle: {
-                height : 3,
-                backgroundColor : '#FFFFFF'
-            }
-        }}
-        >
-        <TopTab.Screen name="Cricket" component={Cricket} />
-        <TopTab.Screen name="Football" component={Football} />
-        </TopTab.Navigator>
-
-    </SafeAreaView>
+    <Stack.Navigator initialRouteName="Splash" screenOptions={{
+      headerShown: false,
+    }}>
+      <Stack.Screen name="Splash" component={Splash} />
+      <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
   );
 };
