@@ -16,7 +16,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/football.png",
         "backgroundColor": "#F3CA52"
-      }
+      },
+      "package": "com.ammar_siddiqui.sportsapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
